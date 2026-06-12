@@ -1,4 +1,4 @@
-FROM python:3.20-alpine
+FROM docker.io/library/python:3.20-alpine2
 RUN mkdir /app
 WORKDIR /app
 ADD requirements.txt /app
