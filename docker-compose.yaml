@@ -1,23 +1,62 @@
-version: '3'
-
-services:
-  app:
-    build: .
-    container_name: python-redis
-    restart: always
-    ports:
-      - "8080:8000"
-    depends_on:
-      - redis
-    volumes:
-      - app:/app
-
-  redis:
-    image: "redis:alpine"
-    container_name: redis
-    restart: always
-    ports:
-      - "6379"
-
-volumes:
-  app:
+{
+  "id": "evidence.exception.d8e54ea4-e097-497a-ad89-a4fd204b7eca",
+  "kind": "evidence",
+  "title": "BIMP Exception Request for docker-compose.yaml",
+  "reason": "need more time because of dependency",
+  "result": "waived",
+  "metadata": {
+    "actor": {
+      "id": "stuartpreston",
+      "type": "github"
+    },
+    "created_at": "2026-07-09T15:47:43.324Z",
+    "observed_at": "2026-07-09T15:47:43.324Z"
+  },
+  "subjects": [
+    {
+      "kind": "source_file",
+      "path": "docker-compose.yaml",
+      "branch": "master",
+      "repository": "polverio/simple-python-website2",
+      "repository_image_reference_id": "471f6cca-e4ef-4031-aedd-1df15bd90011"
+    }
+  ],
+  "lifecycle": "active",
+  "extensions": {
+    "com.pendrica.bimp": {
+      "branch": "master",
+      "reason": "need more time because of dependency",
+      "provider": "github",
+      "decided_at": "2026-07-09T15:48:27.964Z",
+      "repository_id": "7dcffa38-53d4-4add-b545-64d7f536208c",
+      "provider_login": "stuartpreston",
+      "branch_head_sha": "5e19f2aae592bd06ae94710b5e465f0b7b7a692f",
+      "requested_expiry": "2026-07-16T15:47:43.318Z",
+      "reviewer_user_id": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+      "remediation_pr_id": "7145bcc0-4428-48fc-96a7-02ba4cc9dd2b",
+      "decision_rationale": null,
+      "provider_pr_number": 35,
+      "exception_review_id": "d8e54ea4-e097-497a-ad89-a4fd204b7eca",
+      "provider_comment_id": "4926977308",
+      "provider_delivery_id": "8553b410-7bad-11f1-8610-4ffd086d0f0c",
+      "repository_full_name": "polverio/simple-python-website2",
+      "repository_target_id": "7dcffa38-53d4-4add-b545-64d7f536208c",
+      "repository_image_reference_id": "471f6cca-e4ef-4031-aedd-1df15bd90011"
+    }
+  },
+  "provenance": {
+    "actor": {
+      "id": "stuartpreston",
+      "type": "github"
+    },
+    "source": {
+      "kind": "provider_snooze_comment",
+      "run_id": "8553b410-7bad-11f1-8610-4ffd086d0f0c"
+    },
+    "producer": {
+      "name": "bimp",
+      "version": "3.1"
+    }
+  },
+  "evidence_type": "com.pendrica.bimp.waiver"
+}
