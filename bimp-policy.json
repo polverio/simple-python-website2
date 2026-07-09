@@ -1,0 +1,126 @@
+{
+  "name": "bimp-policy",
+  "objects": [
+    {
+      "id": "constraint.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping.org_rsuw8dwyxvxr_policy_default_image_mapping_phase_default.689b1ec3_3854_458f_a304_57ca5331f01f",
+      "kind": "constraint",
+      "title": "Approved base image transition: docker.io/library/redis:alpine to docker.io/library/redis:alpine2",
+      "metadata": {
+        "actor": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+        "created_at": "2026-07-09T15:28:39.083Z"
+      },
+      "modality": "MUST",
+      "lifecycle": "active",
+      "extensions": {
+        "com.pendrica.bimp": {
+          "reason": "docker.io/library/redis:alpine is outdated",
+          "phase_id": "org_rSUW8DwYXVxR:policy:default-image-mapping:phase:default",
+          "to_image": "docker.io/library/redis:alpine2",
+          "from_image": "docker.io/library/redis:alpine",
+          "mapping_id": "689b1ec3-3854-458f-a304-57ca5331f01f",
+          "phase_name": "Default",
+          "remediation": {
+            "enabled": true,
+            "critical_fast_track": false
+          },
+          "applies_after": null,
+          "platform_scope": null,
+          "policy_group_id": "org_rSUW8DwYXVxR:policy:default-image-mapping",
+          "source_attribution": null,
+          "policy_group_version": 6
+        }
+      },
+      "constraint_type": "base_image_policy"
+    },
+    {
+      "id": "policy.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping",
+      "kind": "policy",
+      "title": "Baseline",
+      "metadata": {
+        "actor": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+        "created_at": "2026-07-09T15:28:39.083Z"
+      },
+      "lifecycle": "active",
+      "extensions": {
+        "com.pendrica.bimp": {
+          "policy_group_id": "org_rSUW8DwYXVxR:policy:default-image-mapping",
+          "external_reference": null,
+          "policy_group_version": 6
+        }
+      },
+      "description": "Starter image mapping policy for all repositories."
+    },
+    {
+      "id": "policy.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping.org_rsuw8dwyxvxr_policy_default_image_mapping_phase_default",
+      "kind": "policy",
+      "title": "Default",
+      "metadata": {
+        "actor": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+        "created_at": "2026-07-09T15:28:39.083Z"
+      },
+      "lifecycle": "active",
+      "extensions": {
+        "com.pendrica.bimp": {
+          "phase_id": "org_rSUW8DwYXVxR:policy:default-image-mapping:phase:default",
+          "source_ref": null,
+          "source_kind": "internal",
+          "policy_group_id": "org_rSUW8DwYXVxR:policy:default-image-mapping",
+          "policy_group_version": 6
+        }
+      }
+    }
+  ],
+  "version": "6",
+  "metadata": {
+    "actor": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+    "created_at": "2026-07-09T15:28:39.083Z"
+  },
+  "mediaType": "application/vnd.pendrica.vouss.policy-pack.v0.1+json",
+  "extensions": {
+    "com.pendrica.bimp": {
+      "rendered_at": "2026-07-09T15:28:39.083Z",
+      "payload_digest": "sha256:940eb616e3d60cdbd4adc0e26d9f8794784c7a17c1d4e93b43e1b562f5c620a5",
+      "organization_id": "org_rSUW8DwYXVxR",
+      "policy_group_id": "org_rSUW8DwYXVxR:policy:default-image-mapping",
+      "publication_path": "bimp-policy.json",
+      "policy_group_version": 6,
+      "policy_group_version_id": "43301fd1-72ec-4811-b22a-f1e8e342d08e"
+    }
+  },
+  "otop_version": 0.2,
+  "relationships": [
+    {
+      "id": "rel.bimp.689b1ec3_3854_458f_a304_57ca5331f01f.derived_from.org_rsuw8dwyxvxr_policy_default_image_mapping_phase_default",
+      "to": "policy.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping.org_rsuw8dwyxvxr_policy_default_image_mapping_phase_default",
+      "from": "constraint.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping.org_rsuw8dwyxvxr_policy_default_image_mapping_phase_default.689b1ec3_3854_458f_a304_57ca5331f01f",
+      "type": "derived_from",
+      "metadata": {
+        "actor": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+        "created_at": "2026-07-09T15:28:39.083Z"
+      },
+      "extensions": {
+        "com.pendrica.bimp": {
+          "phase_id": "org_rSUW8DwYXVxR:policy:default-image-mapping:phase:default",
+          "mapping_id": "689b1ec3-3854-458f-a304-57ca5331f01f",
+          "policy_group_version": 6
+        }
+      }
+    },
+    {
+      "id": "rel.bimp.689b1ec3_3854_458f_a304_57ca5331f01f.governed_by.org_rsuw8dwyxvxr_policy_default_image_mapping",
+      "to": "policy.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping",
+      "from": "constraint.bimp.org_rsuw8dwyxvxr_policy_default_image_mapping.org_rsuw8dwyxvxr_policy_default_image_mapping_phase_default.689b1ec3_3854_458f_a304_57ca5331f01f",
+      "type": "governed_by",
+      "metadata": {
+        "actor": "jMINuQ2SIxeOGklUP5lWjm2bnjPWYxDu",
+        "created_at": "2026-07-09T15:28:39.083Z"
+      },
+      "extensions": {
+        "com.pendrica.bimp": {
+          "mapping_id": "689b1ec3-3854-458f-a304-57ca5331f01f",
+          "policy_group_version": 6
+        }
+      }
+    }
+  ]
+}
